@@ -2,9 +2,9 @@
 
 #include <gtest/gtest.h>
 
+#include "first_stack.hpp"
 #include "iostream"
-#include "stack_one.hpp"
-#include "stack_two.hpp"
+#include "second_stack.hpp"
 
 TEST(simpleStack, constrWithNoArgument) {
   Stack<int> stackObj;
@@ -67,19 +67,19 @@ TEST(simpleStack, stackExpansion) {
 }
 
 TEST(hardStack, pushEmplace) {
-  HStack<int> stackObj;
+  SStack<int> stackObj;
   stackObj.push_emplace(4);
   ASSERT_EQ(stackObj.head(), 4);
 }
 
 TEST(hardStack, push) {
-  HStack<int> stackObj;
+  SStack<int> stackObj;
   stackObj.push(9);
   ASSERT_EQ(stackObj.head(), 9);
 }
 
 TEST(hardStack, pop) {
-  HStack<int> stackObj;
+  SStack<int> stackObj;
   stackObj.push(9);
   stackObj.push(4);
   stackObj.pop();
@@ -87,17 +87,17 @@ TEST(hardStack, pop) {
 }
 
 TEST(hardStack, headEmpty) {
-  HStack<int> stackObj;
+  SStack<int> stackObj;
   ASSERT_THROW(stackObj.head(), std::out_of_range);
 }
 
 TEST(hardStack, popEmptyStack) {
-  HStack<int> stackObj;
+  SStack<int> stackObj;
   ASSERT_THROW(stackObj.pop(), std::out_of_range);
 }
 
 TEST(hardStack, stackExpansion) {
-  HStack<int> stackObj;
+  SStack<int> stackObj;
   for (int i=0;i<31;++i){
     stackObj.push(std::move(i));
   }
@@ -105,8 +105,8 @@ TEST(hardStack, stackExpansion) {
 }
 
 TEST(hardStack, constr) {
-  HStack<int> stackObj;
+  SStack<int> stackObj;
   stackObj.push(8);
-  HStack<int> stack = HStack(std::move(stackObj));
+  SStack<int> stack = SStack(std::move(stackObj));
   ASSERT_EQ(stack.head(), 8);
 }

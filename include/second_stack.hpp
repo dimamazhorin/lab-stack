@@ -3,10 +3,10 @@
 #include "cstring"
 #include "iostream"
 template <typename T>
-class HStack {
+class SStack {
  public:
-  HStack() : m_memp(new T[16]), m_head(0), m_stackSize(16) {}
-  HStack(HStack&& stack){
+  SStack() : m_memp(new T[16]), m_head(0), m_stackSize(16) {}
+  SStack(SStack&& stack){
     m_head = stack.m_head;
     m_memp = stack.m_memp;
     m_stackSize = stack.m_stackSize;
@@ -57,7 +57,7 @@ class HStack {
     m_head-=1;
     return m_memp[m_head];
   };
-  ~HStack() { delete[] m_memp; }
+  ~SStack() { delete[] m_memp; }
 
  private:
   T* m_memp;
