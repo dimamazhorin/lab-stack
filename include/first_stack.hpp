@@ -6,8 +6,7 @@
 #include <utility>
 
 #include "iostream"
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
+
 
 template <typename T>
 class Stack {
