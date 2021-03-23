@@ -1,5 +1,5 @@
-// Copyright 2020 Your Name <your_email>
-
+// Copyright 2020 dima <dmitrymazhorinjr@gmail.com>
+// INCLUDE SECOND_STACK_HPP_
 #include "cstring"
 #include "iostream"
 template <typename T>
