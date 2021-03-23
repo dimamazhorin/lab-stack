@@ -2,6 +2,10 @@
 // Created by dima on 15.03.2021.
 //
 INCLUDE FIRST_STACK_HPP_
+#ifndef INCLUDE_HEADER_HPP_
+#define INCLUDE_HEADER_HPP_
+
+
 #include <cstring>
 #include <utility>
 
@@ -70,3 +74,4 @@ class Stack {
   int m_head;
   int m_stackSize;
 };
+#endif // INCLUDE_HEADER_HPP_

@@ -1,5 +1,9 @@
 // Copyright 2020 <dmitrymazhorinjr@gmail.com>
 INCLUDE SECOND_STACK_HPP_
+#ifndef INCLUDE_HEADER_HPP_
+#define INCLUDE_HEADER_HPP_
+
+
 #include "cstring"
 #include "iostream"
 template <typename T>
@@ -64,3 +68,4 @@ class SStack {
   int m_head;
   int m_stackSize;
 };
+#endif // INCLUDE_HEADER_HPP_
