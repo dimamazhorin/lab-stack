@@ -1,7 +1,7 @@
-// Copyright 2020 <dmitrymazhorinjr@gmail.com>
-INCLUDE SECOND_STACK_HPP_
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
+// Copyright 2020 dima <dmitrymazhorinjr@gmail.com>
+
+#ifndef INCLUDE_SECOND_STACK_HPP_
+#define INCLUDE_SECOND_STACK_HPP_
 
 
 #include "cstring"
@@ -68,4 +68,4 @@ class SStack {
   int m_head;
   int m_stackSize;
 };
-#endif // INCLUDE_HEADER_HPP_
+#endif // INCLUDE_SECOND_STACK_HPP_

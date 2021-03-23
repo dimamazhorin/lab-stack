@@ -1,9 +1,7 @@
 // Copyright 2020 dima <dmitrymazhorinjr@gmail.com>
-// Created by dima on 15.03.2021.
-//
-INCLUDE FIRST_STACK_HPP_
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
+
+#ifndef INCLUDE_FIRST_STACK_HPP_
+#define INCLUDE_FIRST_STACK_HPP_
 
 
 #include <cstring>
@@ -74,4 +72,4 @@ class Stack {
   int m_head;
   int m_stackSize;
 };
-#endif // INCLUDE_HEADER_HPP_
+#endif // INCLUDE_FIRST_STACK_HPP_
