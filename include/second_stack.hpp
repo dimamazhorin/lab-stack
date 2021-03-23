@@ -6,6 +6,7 @@
 
 #include "cstring"
 #include "iostream"
+#include <utility>
 template <typename T>
 class SStack {
  public:
@@ -58,7 +59,7 @@ class SStack {
     if (m_head == 0) {
       throw std::out_of_range{"Empty array"};
     }
-    m_head-=1;
+    m_head -= 1;
     return m_memp[m_head];
   }
   ~SStack() { delete[] m_memp; }
