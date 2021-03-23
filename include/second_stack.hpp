@@ -1,5 +1,5 @@
 // Copyright 2020 <dmitrymazhorinjr@gmail.com>
-// INCLUDE SECOND_STACK_HPP_
+INCLUDE SECOND_STACK_HPP_
 #include "cstring"
 #include "iostream"
 template <typename T>

@@ -1,7 +1,7 @@
-//
+// Copyright 2020 dima <dmitrymazhorinjr@gmail.com>
 // Created by dima on 15.03.2021.
 //
-// INCLUDE FIRST_STACK_HPP_
+INCLUDE FIRST_STACK_HPP_
 #include <cstring>
 #include <utility>
 
