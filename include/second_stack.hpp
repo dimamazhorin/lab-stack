@@ -1,4 +1,4 @@
-// Copyright 2020 dima <dmitrymazhorinjr@gmail.com>
+// Copyright 2020 <dmitrymazhorinjr@gmail.com>
 // INCLUDE SECOND_STACK_HPP_
 #include "cstring"
 #include "iostream"
@@ -11,7 +11,7 @@ class SStack {
     m_memp = stack.m_memp;
     m_stackSize = stack.m_stackSize;
     stack.m_memp = nullptr;
-  };
+  }
   template <typename... Args>
   void push_emplace(Args&&... value) {
     if (m_head == m_stackSize) {
@@ -42,21 +42,21 @@ class SStack {
     }
     m_memp[m_head] = std::move(value);
     m_head += 1;
-  };
+  }
   const T& head() const {
     if (m_head == 0) {
       throw std::out_of_range{"Stack is empty"};
     }
 
     return m_memp[m_head - 1];
-  };
+  }
   T pop() {
     if (m_head == 0) {
       throw std::out_of_range{"Empty array"};
     }
     m_head-=1;
     return m_memp[m_head];
-  };
+  }
   ~SStack() { delete[] m_memp; }
 
  private:

@@ -17,7 +17,7 @@ class Stack {
     m_memp = stack.m_memp;
     m_stackSize = stack.m_stackSize;
     stack.m_memp = nullptr;
-  };
+  }
   Stack(const Stack&) = delete;  // test
 
   void push(T&& value) {
@@ -34,7 +34,7 @@ class Stack {
     }
     m_memp[m_head] = value;
     m_head += 1;
-  };
+  }
 
   void push(const T& value) {
     if (m_head == m_stackSize) {
@@ -50,19 +50,19 @@ class Stack {
     }
     m_memp[m_head] = value;
     m_head += 1;
-  };
+  }
   void pop() {
     if (m_head == 0) {
       throw std::out_of_range{"Empty stack"};
     }
     m_head -= 1;
-  };
+  }
   const T& head() const {
     if (m_head == 0) {
       throw std::out_of_range{"Stack is empty"};
     }
     return m_memp[m_head - 1];
-  };
+  }
   ~Stack() { delete[] m_memp; }
 
  private:
@@ -70,5 +70,3 @@ class Stack {
   int m_head;
   int m_stackSize;
 };
-
-#endif  // INCLUDE_HEADER_HPP_
